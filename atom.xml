@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>guoyouworld</title>
+  <icon>https://www.gravatar.com/avatar/2e1b1729e9c9476ddc5d308879915569</icon>
+  <subtitle>我家有块自留地,有青草,有西瓜.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-07-09T08:25:21.217Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>kaliey</name>
+    <email>guoyouworld@163.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello Guoyouworld</title>
+    <link href="http://yoursite.com/2018/07/09/hello-world/"/>
+    <id>http://yoursite.com/2018/07/09/hello-world/</id>
+    <published>2018-07-09T07:19:38.277Z</published>
+    <updated>2018-07-09T08:25:21.217Z</updated>
+    
+    <content type="html"><![CDATA[<p>竹篮打水，最终什么都留不下，那我们为什么不在竹篮下面接一个塑料袋呢…<br><a id="more"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;竹篮打水，最终什么都留不下，那我们为什么不在竹篮下面接一个塑料袋呢…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
