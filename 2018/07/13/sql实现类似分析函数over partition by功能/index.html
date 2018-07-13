@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://guoyouworld.github.io">
-  <title>Git强制推送 | guoyouworld</title>
+  <title>sql实现类似分析函数over partition by功能 | guoyouworld</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
-<meta name="keywords" content="git,github">
+  <meta name="description" content="近期项目用到了类似oracle的分析函数over partition by功能，但是我们用的数据库是sqllite，并不支持分析函数。So ……">
+<meta name="keywords" content="sql,sqllite">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git强制推送">
-<meta property="og:url" content="https://guoyouworld.github.io/2018/07/12/Git强制推送/index.html">
+<meta property="og:title" content="sql实现类似分析函数over partition by功能">
+<meta property="og:url" content="https://guoyouworld.github.io/2018/07/13/sql实现类似分析函数over partition by功能/index.html">
 <meta property="og:site_name" content="guoyouworld">
-<meta property="og:description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
+<meta property="og:description" content="近期项目用到了类似oracle的分析函数over partition by功能，但是我们用的数据库是sqllite，并不支持分析函数。So ……">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-13T02:22:42.168Z">
+<meta property="og:updated_time" content="2018-07-13T02:42:28.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git强制推送">
-<meta name="twitter:description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
+<meta name="twitter:title" content="sql实现类似分析函数over partition by功能">
+<meta name="twitter:description" content="近期项目用到了类似oracle的分析函数over partition by功能，但是我们用的数据库是sqllite，并不支持分析函数。So ……">
   
     <link rel="alternative" href="/atom.xml" title="guoyouworld" type="application/atom+xml">
   
@@ -161,21 +161,21 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Git强制推送" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-sql实现类似分析函数over partition by功能" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Git强制推送
+      sql实现类似分析函数over partition by功能
     </h1>
   
 
         
         <!--
-<a href="/2018/07/12/Git强制推送/" class="archive-article-date">
-  	<time datetime="2018-07-12T01:16:50.000Z" itemprop="datePublished">2018-07-12</time>
+<a href="/2018/07/13/sql实现类似分析函数over partition by功能/" class="archive-article-date">
+  	<time datetime="2018-07-13T02:26:02.000Z" itemprop="datePublished">2018-07-13</time>
   	<span id="busuanzi_container_page_pv" style="color:DarkGray">
       view <span id="busuanzi_value_page_pv"></span> times
     </span>
@@ -183,8 +183,8 @@
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
 -->
-<a href="/2018/07/12/Git强制推送/" class="archive-article-date">
-  	<time datetime="2018-07-12T01:16:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
+<a href="/2018/07/13/sql实现类似分析函数over partition by功能/" class="archive-article-date">
+  	<time datetime="2018-07-13T02:26:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
 </a>
 
         
@@ -194,40 +194,30 @@
       
         <!-- 目录内容 -->
         
-            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" >
-                <span class="btn-bg"></span>
-                <span class="btn-text">文章导航</span>
-            </p>
-            <div id="toc-article" class="toc-article" style="display:none">
-                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-                <strong class="toc-title">文章目录</strong>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库替换"><span class="toc-number">1.</span> <span class="toc-text">远程仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地仓库替换"><span class="toc-number">2.</span> <span class="toc-text">本地仓库替换</span></a></li></ol>
-            </div>
-            <script type="text/javascript">
-              function showToc(){
-                  var toc_article = document.getElementById("toc-article");
-                  var show_toc_btn = document.getElementById("show-toc-btn");
-                  toc_article.setAttribute("style","display:block");
-                  show_toc_btn.setAttribute("style","display:none");
-                };
-              function showBtn(){
-                  var toc_article = document.getElementById("toc-article");
-                  var show_toc_btn = document.getElementById("show-toc-btn");
-                  toc_article.setAttribute("style","display:none");
-                  show_toc_btn.setAttribute("style","display:block");
-                };
-             </script>
-              
         <!-- 目录内容结束 -->
-        <p>如何替换远程仓库内容？<br>如何替换本地仓库修改？<br><a id="more"></a></p>
-<h3 id="远程仓库替换"><a href="#远程仓库替换" class="headerlink" title="远程仓库替换"></a>远程仓库替换</h3><p>放弃远程仓库所有内容，用本地内容进行替换。</p>
-<pre><code class="prettyprint">git remote add origin &lt;url&gt;
-git push --force --set-upstream origin master
+        <p>近期项目用到了类似oracle的分析函数over partition by功能，但是我们用的数据库是sqllite，并不支持分析函数。<br>So ……<br><a id="more"></a></p>
+<h3 id="明确需求"><a href="#明确需求" class="headerlink" title="明确需求"></a>明确需求</h3><p>我们需要取所有数据，如果某一字段有重复从字段重复数据内取一条时间最近接近现在时间的.</p>
+<blockquote>
+<ul>
+<li>(假设id重复)</li>
+<li>(假设存时间的字段为dtime)</li>
+<li>(假设表明为tableName)</li>
+</ul>
+</blockquote>
+<p><strong>在oracle内实现：</strong></p>
+<pre><code class="prettyprint">select * from (
+select a.*,
+row_number() over(partition by id order by dtime desc) rn
+from tableName
+)
+where rn =1;
 </code></pre>
 <p><br></p>
-<h3 id="本地仓库替换"><a href="#本地仓库替换" class="headerlink" title="本地仓库替换"></a>本地仓库替换</h3><p>放弃本地仓库所有修改，用远程内容进行替换。</p>
-<pre><code class="prettyprint">git reset --hard HEAD  
-git pull
+<p><strong>类似的功能在没有分析函数的数据库：</strong></p>
+<pre><code class="prettyprint">select *,
+(select count(1) from tableName b where id=b.id and dtime&lt;b.dtime ) rn
+from tableName
+where rn=0
 </code></pre>
 
       
@@ -263,11 +253,11 @@ git pull
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sqllite</a>
         		</li>
       		
 		</ul>
@@ -323,7 +313,7 @@ git pull
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://guoyouworld.github.io/2018/07/12/Git强制推送/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://guoyouworld.github.io/2018/07/13/sql实现类似分析函数over partition by功能/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -337,18 +327,9 @@ git pull
   
 <nav id="article-nav">
   
-    <a href="/2018/07/13/sql实现类似分析函数over partition by功能/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sql实现类似分析函数over partition by功能
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/10/初探网络编程/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">初探网络编程</div>
+    <a href="/2018/07/12/Git强制推送/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git强制推送</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -367,19 +348,6 @@ git pull
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库替换"><span class="toc-number">1.</span> <span class="toc-text">远程仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地仓库替换"><span class="toc-number">2.</span> <span class="toc-text">本地仓库替换</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
@@ -400,7 +368,7 @@ git pull
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://guoyouworld.github.io/2018/07/12/Git强制推送/",
+  id: "https://guoyouworld.github.io/2018/07/13/sql实现类似分析函数over partition by功能/",
   owner: 'guoyouworld',
   repo: 'guoyouworld.github.io',
   oauth: {
