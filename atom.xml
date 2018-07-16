@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://guoyouworld.github.io/"/>
-  <updated>2018-07-13T07:29:39.228Z</updated>
+  <updated>2018-07-16T01:48:44.254Z</updated>
   <id>https://guoyouworld.github.io/</id>
   
   <author>
@@ -17,13 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>遇到问题该怎么办[思路探索中...]</title>
+    <link href="https://guoyouworld.github.io/2018/07/16/%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E-%E6%80%9D%E8%B7%AF%E6%8E%A2%E7%B4%A2%E4%B8%AD/"/>
+    <id>https://guoyouworld.github.io/2018/07/16/遇到问题该怎么办-思路探索中/</id>
+    <published>2018-07-16T01:34:40.000Z</published>
+    <updated>2018-07-16T01:48:44.254Z</updated>
+    
+    <content type="html"><![CDATA[<p>程序出现bug？矿泉水瓶打不开？？我们该怎么办？<br><a id="more"></a></p><h3 id="不要慌"><a href="#不要慌" class="headerlink" title="不要慌"></a>不要慌</h3><p>首先要明白，方法总比困难多，不要慌！！<strong>这是好事</strong>。</p><blockquote><p>有问题才有提高的可能，将问题归类，记下来。<br>以后遇到可以从自己的数据库找到解决方案，才不枉费我们的努力。<br>若是被绊倒后拍拍屁股继续走了，下次还会再次被绊倒，不会觉得很傻？</p></blockquote><p><br><br></p><h3 id="怎么办"><a href="#怎么办" class="headerlink" title="怎么办"></a>怎么办</h3><ol><li>找个地方将问题<strong>写下来</strong></li><li>搞明白是什么问题，找出精确<strong>有效的</strong>信息。</li><li><strong>只描述症状，不描述猜想</strong></li><li>按照<strong>时间顺序</strong>描述</li><li>去除无意义的疑问<br><br><br><h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;程序出现bug？矿泉水瓶打不开？？我们该怎么办？&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://guoyouworld.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Spring源码深度解析[持续更新中...]</title>
     <link href="https://guoyouworld.github.io/2018/07/13/Spring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/"/>
     <id>https://guoyouworld.github.io/2018/07/13/Spring源码深度解析/</id>
     <published>2018-07-13T05:53:00.000Z</published>
-    <updated>2018-07-13T07:29:39.228Z</updated>
+    <updated>2018-07-16T01:50:41.707Z</updated>
     
-    <content type="html"><![CDATA[<p>Spring源码深度解析读书笔记…<br><a id="more"></a></p><h3 id="Spring的整体架构"><a href="#Spring的整体架构" class="headerlink" title="Spring的整体架构"></a>Spring的整体架构</h3><p><img src="https://user-images.githubusercontent.com/21979120/42675065-e926e4dc-86a4-11e8-9f6c-38950ea6e1fa.png" alt="Spring的整体架构"></p><h3 id="Spring环境搭建"><a href="#Spring环境搭建" class="headerlink" title="Spring环境搭建"></a>Spring环境搭建</h3><p>到你想要储存源码的目录执行下面的语句（git安装不用讲了吧）</p><pre><code class="prettyprint">git clone https://github.com/spring-projects/spring-framework.git</code></pre><p>实在不会Git可以到<a href="https://github.com/spring-projects/spring-framework" target="_blank" rel="noopener">Spring托管网站</a>去下载。</p><p>下载完成后,到想要学习的目录执行下面的命令（例如：spring-core目录）：</p><pre><code class="prettyprint">gradle cleanidea eclipse</code></pre><p>然后导入eclipse…</p><hr><p>额，书上是这么说的，我去试试…<br>坑啊：<code>bash: gradle: command not found</code><br>…<br>回过头来发现，需要安装一个gradle构建工具<br>安装地址：<a href="https://gradle.org/releases/" target="_blank" rel="noopener">https://gradle.org/releases/</a><br><img src="https://user-images.githubusercontent.com/21979120/42677677-10c2b674-86af-11e8-873d-ad189795f938.png" alt="下载位置"><br><strong>配置环境变量：</strong><br>GRADLE_HOME=D:\gradle\gradle-4.8.1-all\gradle-4.8.1<br>%GRADLE_HOME%\bin;<br><sub>配置完记得重启git，要不然还是找不到命令，别问我是怎么知道的….</sub></p><p><img src="https://user-images.githubusercontent.com/21979120/42678556-d64d6f36-86b1-11e8-8ada-abf9c0374de8.png" alt="failed"><br>哇，心态炸了，不写了…</p>]]></content>
+    <content type="html"><![CDATA[<p>Spring源码深度解析读书笔记…<br><a id="more"></a></p><h3 id="Spring的整体架构"><a href="#Spring的整体架构" class="headerlink" title="Spring的整体架构"></a>Spring的整体架构</h3><p><img src="https://user-images.githubusercontent.com/21979120/42675065-e926e4dc-86a4-11e8-9f6c-38950ea6e1fa.png" alt="Spring的整体架构"></p><h3 id="Spring环境搭建"><a href="#Spring环境搭建" class="headerlink" title="Spring环境搭建"></a>Spring环境搭建</h3><p>到你想要储存源码的目录执行下面的语句（git安装不用讲了吧）</p><pre><code class="prettyprint">git clone https://github.com/spring-projects/spring-framework.git</code></pre><p>实在不会Git可以到<a href="https://github.com/spring-projects/spring-framework" target="_blank" rel="noopener">Spring托管网站</a>去下载。</p><p>下载完成后,到想要学习的目录执行下面的命令（例如：spring-core目录）：</p><pre><code class="prettyprint">gradle cleanidea eclipse</code></pre><p>然后导入eclipse…</p><hr><p>额，书上是这么说的，我去试试…<br>坑啊：<code>bash: gradle: command not found</code><br>…<br>回过头来发现，需要安装一个gradle构建工具<br>安装地址：<a href="https://gradle.org/releases/" target="_blank" rel="noopener">https://gradle.org/releases/</a><br><img src="https://user-images.githubusercontent.com/21979120/42677677-10c2b674-86af-11e8-873d-ad189795f938.png" alt="下载位置"><br><strong>配置环境变量：</strong><br>GRADLE_HOME=D:\gradle\gradle-4.8.1-all\gradle-4.8.1<br>%GRADLE_HOME%\bin;<br><sub>配置完记得重启git，要不然还是找不到命令，别问我是怎么知道的….</sub></p><p><img src="https://user-images.githubusercontent.com/21979120/42678556-d64d6f36-86b1-11e8-8ada-abf9c0374de8.png" alt="failed"><br>哇，心态炸了，不写了…</p><hr><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531561272766&amp;di=a06271af073440cb91ef02d3a37ffe3e&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D725318554%2C1946417039%26fm%3D214%26gp%3D0.jpg" alt="我回来了"><br>开个玩笑，学习要紧，学习要紧…</p><h3 id="遇到问题怎么办？"><a href="#遇到问题怎么办？" class="headerlink" title="遇到问题怎么办？"></a>遇到问题怎么办？</h3><ul><li>找个地方将问题写下来</li><li>搞明白是什么问题，找出精确有效的信息。</li><li>只描述症状，不描述猜想</li><li>按照时间顺序描述</li><li>去除无意义的疑问<br>我觉得这块可以作为一篇新的<a href="https://guoyouworld.github.io/2018/07/16/遇到问题该怎么办-思路探索中/">文章</a>…</li></ul>]]></content>
     
     <summary type="html">
     
