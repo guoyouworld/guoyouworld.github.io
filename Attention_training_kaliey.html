@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Attention_training_kaliey</title>
+<script type="text/javascript">
+window.onload = function(){
+	
+	var startTime;
+	var endTime;
+	var max;
+	var max_decrease;
+	var myVar;
+	var isDone=true;
+	
+	document.getElementById("fire").onclick = function(){
+		isDone=true;
+		document.getElementById("cos_time").innerHTML = "";
+		//alert(1)
+		var row = document.getElementById("row").value.replace(" ","");
+		var reg = /^[0-9]*[1-9][0-9]*$/ 
+		if(row==""){
+			alert("please input row")
+			return;
+		}
+		else if(!reg.test(row)){
+			alert("please input number")
+			return;
+		}
+		max = row * row;
+		max_decrease = row * row;
+		
+		//alert(max)
+		var tem = [];
+		for(var i=0; i<max; i++){
+			tem[i] = i+1;
+		}
+		tem.sort(function() {
+		     return (0.5-Math.random());
+		})
+		//alert(tem)
+		var data = new Array(row);
+		for(var i =0; i<row;i++){
+			var arry = tem.slice(i*row, row*(i+1));
+			data[i] = arry;
+		}
+		//alert(data)
+		var html = "";
+		data.forEach(v=>{  
+		    console.log(v);
+		    html+="<tr>";
+		    v.forEach(iv=>{
+		    	html+="<td align='center' width='50' onclick='checkSeq("+iv+")'>"+iv+"</td>";
+		    })
+			html+="</tr>";
+		});
+		var table = document.getElementById("table");
+		table.innerHTML=html;
+		table.setAttribute('height', 50*row);
+		table.setAttribute('width', 50*row);
+		
+		//myVar = setInterval(myTimer, 1000);
+		startTime = new Date();
+		
+	}
+		
+	/* function myTimer() {
+    	document.getElementById("start_time").innerHTML = new Date().toLocaleTimeString();
+	} */
+ 	checkSeq = function (id) {
+		// alert(id)
+		if(isDone){
+			//console.info(max+"====="+max_decrease+"====="+(max-max_decrease+1))
+			var tem = max-max_decrease+1;
+			
+			if(max==max_decrease){
+				if(max==1){
+					isDone = false;
+					return;
+				}
+				if(id!=tem){
+					document.getElementById("msg_error").innerHTML ="Error : "+tem;
+					document.getElementById("msg").innerHTML ="";
+				}else{
+					document.getElementById("msg_error").innerHTML ="";
+					document.getElementById("msg").innerHTML ="Cursor : "+id;
+					max_decrease--;
+				}
+			}
+			else {
+				console.info(max+"====="+max_decrease+"====="+tem)
+				if(id!=max || id != tem ){
+					if (id != tem){
+						document.getElementById("msg_error").innerHTML ="Error : "+tem;
+						document.getElementById("msg").innerHTML ="";
+					}else{
+						document.getElementById("msg_error").innerHTML ="";
+						document.getElementById("msg").innerHTML ="Cursor : "+id;
+						max_decrease--;
+					}
+				}else {
+					//clearInterval(myVar);
+					document.getElementById("msg_error").innerHTML ="";
+					document.getElementById("msg").innerHTML ="";
+					document.getElementById("cos_time").innerHTML = "    Spend time : "+(new Date().getTime()-startTime.getTime())/1000+"'s";
+					isDone = false;
+				}
+			}	
+		}
+	}
+	
+}
+</script>
+<style type="text/css">
+.box{
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+}
+input{
+	border: 1px solid #ccc;
+	padding: 7px 0px;
+	border-radius: 3px;
+	padding-left:5px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+input:focus{
+		border-color: #66afe9;
+		outline: 0;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+		box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+#fire{
+	 /* 按钮美化 */
+	width: 70px; /* 宽度 */
+	height: 31px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 17px; /* 字体大小 */
+}
+#fire:hover { /* 鼠标移入按钮范围时改变颜色 */
+	background: #5599FF;
+}
+</style>
+</head>
+<body>
+	<div class="box">
+		<input type="text" class="form-control" id="row" placeholder="please input row"/>
+		<button type="submit" class="btn btn-default" id="fire">fire</button>
+		<span id="start_time"></span>
+		<span id="cos_time" style="color: green;"></span>
+		<span id="msg_error" style="color: red"></span>
+		<span id="msg" style="color: green"></span>
+	</div>
+	<br/>
+	<div class="box">
+		<table id="table" border="1" cellspacing="0" cellpadding="0" ></table>
+	</div>
+</body>
+</html>
